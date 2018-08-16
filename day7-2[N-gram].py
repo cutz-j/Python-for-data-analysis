@@ -1,6 +1,8 @@
 import re
 
-# N-gram
+# N-gram 클래스 불러오기
+    
+    
 def split(text, n):
     pattern=re.compile("[\W\w\s]{1,%d}" %n)
     res=pattern.findall(text)
@@ -9,7 +11,7 @@ def split(text, n):
     return res
     
 
-def ngram(sa, sb, num):
+def gram(sa, sb, num):
     saList=split(sa, num)
     sbList=split(sb, num)
     cnt=0
@@ -30,7 +32,7 @@ def ngram(sa, sb, num):
 a="오늘 상공회의소에서 문자 비교 알고리즘을 배웠다"
 b="문자간 비교하는 알고리즘을 상공회의소에서 오늘 배웠다"
 # 2-gram
-print(ngram(a,b,2))
+print(gram(a,b,2))
 
 # 3-gram
-print(ngram(a,b,3))
+print(gram(a,b,3))
