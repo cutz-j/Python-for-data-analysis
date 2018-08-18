@@ -5,7 +5,7 @@ from gensim.models import word2vec
 
 # W2V
 
-fp=codecs.open("BEXX0003.txt", "r", encoding='utf-16')
+fp=codecs.open("D:/DataAnalysis/BEXX0003.txt", "r", encoding='utf-16')
 soup=BeautifulSoup(fp, 'html.parser')
 #print(soup)
 
@@ -16,6 +16,7 @@ text=body.getText()
 twit=Twitter()
 
 # /r/n 제거
+print(text)
 lines=text.split("\r\n")
 result=[]
 # word List comprehension // 필요오소만
